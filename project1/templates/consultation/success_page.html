@@ -1,0 +1,56 @@
+<!-- bookings/templates/bookings/booking_success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Consultation Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 200px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .back-button {
+            margin-top: 30px;
+            padding: 20px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Booking Consultation Success!</h2>
+        <p>Your booking details:</p>
+        <p><strong> Name:</strong> {{ booking.name }}</p><br>
+        <p><strong>Email:</strong> {{ booking.email }}</p><br>
+        <p><strong>phone:</strong> {{ booking.Phone }}</p><br>
+        <p><strong>Date:</strong> {{ booking.Date }}</p><br>
+        <p><strong>time:</strong> {{ booking.Time }}</p><br>
+        <!-- Add more fields as needed -->
+
+        <a href="{% url 'app1:index' %}" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
